@@ -1,0 +1,119 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Noto Sans Mono" monospace;
+}
+
+.my-masonry-grid {
+    display: flex;
+    width: auto;
+    margin-left: -20px;
+}
+
+.my-masonry-grid_column {
+    padding-left: 20px;
+    padding-top: 10px;
+    background-clip: padding-box;
+}
+
+.my-masonry-grid_column>div {
+    /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: 30px;
+}
+
+.grid-item .img1 {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item2 .img2 {
+    width: 350px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item .img3 {
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item2 .img4 {
+    width: 350px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item .img5 {
+    width: 350px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item2 .img6 {
+    width: 350px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item .img7 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item2 .img8 {
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item .img9 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item2 .img10 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item .img11 {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.grid-item2 .img12 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item .img13 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid-item2 .img14 {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.childContainer li {
+    display: inline;
+    padding: 20px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import "./about.scss";

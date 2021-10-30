@@ -1,0 +1,52 @@
+$backgroundColor: #242423;
+$color: #fff;
+$divider-color: #e8eddf;
+$divider-height: false;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: $backgroundColor;
+    color: $color;
+}
+
+.wrapper .container {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background: $divider-color;
+}
+
+
+/*navbar*/
+
+@import "./components/navbar.scss";
+
+/*headers*/
+
+@import "./components/header.scss";
+
+/*about*/
+
+.about {
+    width: 100%;
+}
+
+.about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about .about-container {
+    width: 70%;
+    float: right;
+}
+
+.about .about-container p {
+    margin: 40px 0;
+    font-size: 2.8rem;
+}

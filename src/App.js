@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Gallery from "./pages/Gallery";
+import styles from "./styles/style.scss";
+import FooterSection from "./components/FooterSection";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/" exact>
+          <Gallery />
+        </Route>
+        <Route path="/about" exact>
+          <About />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
+        </Route>
+        <FooterSection />
+      </Switch>
+      {/* <div
+        className="author"
+        style={{
+          textAlign: "center",
+          margin: "0",
+        }}
+      >
+        <p> @Tazlo Zoli 2021 </p>{" "}
+      </div>{" "} */}
     </div>
   );
 }
