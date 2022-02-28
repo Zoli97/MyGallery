@@ -154,6 +154,16 @@ const SidebarSection = () => {
           </MenuItem>
         </Link>
 
+        <Link to="/gallery2">
+          <MenuItem>
+            <div style={MyMenuItem}>
+              <motion.p style={parg} variants={item1_variants}>
+                Gallery
+              </motion.p>
+            </div>
+          </MenuItem>
+        </Link>
+
         <Link to="/about">
           <MenuItem>
             <div style={MyMenuItem}>

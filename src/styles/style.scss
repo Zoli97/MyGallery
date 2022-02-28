@@ -1,119 +1,181 @@
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: "Noto Sans Mono" monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Noto Sans Mono" monospace;
 }
 
 .my-masonry-grid {
-    display: flex;
-    width: auto;
-    margin-left: -20px;
+  display: flex;
+  width: auto;
+  margin-left: -20px;
 }
 
 .my-masonry-grid_column {
-    padding-left: 20px;
-    padding-top: 10px;
-    background-clip: padding-box;
+  padding-left: 20px;
+  padding-top: 10px;
+  background-clip: padding-box;
 }
 
-.my-masonry-grid_column>div {
-    /* change div to reference your elements you put in <Masonry> */
-    margin-bottom: 30px;
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
 }
 
 .grid-item .img1 {
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item2 .img2 {
-    width: 350px;
-    height: 300px;
-    cursor: pointer;
+  width: 350px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item .img3 {
-    width: 300px;
-    height: 400px;
-    cursor: pointer;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item2 .img4 {
-    width: 350px;
-    height: 400px;
-    cursor: pointer;
+  width: 350px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item .img5 {
-    width: 350px;
-    height: 400px;
-    cursor: pointer;
+  width: 350px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item2 .img6 {
-    width: 350px;
-    height: 300px;
-    cursor: pointer;
+  width: 350px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item .img7 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item2 .img8 {
-    width: 300px;
-    height: 400px;
-    cursor: pointer;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item .img9 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item2 .img10 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item .img11 {
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .grid-item2 .img12 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item .img13 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .grid-item2 .img14 {
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .childContainer li {
-    display: inline;
-    padding: 20px 20px;
+  display: inline;
+  padding: 20px 20px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+.grid-imgs2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 /1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-wrapper > .content {
+  position: absolute;
+  inset: 0;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+  transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  filter: blur(3px);
+}
+.img-wrapper:hover > img.zoom {
+  transform: scale(1.1);
+}
+
+.img-wrapper:hover > .content.slide-left {
+  transform: translateX(0);
+}
+.img-wrapper > .content.slide-left {
+  transform: translateX(-100%);
+}
+
+.img-wrapper:hover > .content.slide-right {
+  transform: translateX(0);
+}
+
+.img-wrapper > .content.slide-right {
+  transform: translateX(100%);
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+}
+.img-wrapper:hover > .content.fade {
+  opacity: 1;
+}
 @import "./about.scss";

@@ -3,6 +3,7 @@ import Gallery from "./pages/Gallery";
 import styles from "./styles/style.scss";
 import FooterSection from "./components/FooterSection";
 import About from "./pages/About";
+import Gallery2 from "./pages/Gallery2";
 import Contact from "./pages/Contact";
 import { Switch, Route } from "react-router-dom";
 
@@ -16,20 +17,15 @@ function App() {
         <Route path="/about" exact>
           <About />
         </Route>
+        <Route path="/gallery2" exact>
+          <Gallery2 />
+        </Route>
+
         <Route path="/contact" exact>
           <Contact />
         </Route>
         <FooterSection />
       </Switch>
-      {/* <div
-        className="author"
-        style={{
-          textAlign: "center",
-          margin: "0",
-        }}
-      >
-        <p> @Tazlo Zoli 2021 </p>{" "}
-      </div>{" "} */}
     </div>
   );
 }
